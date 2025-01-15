@@ -27,7 +27,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "random_pet" "sg" {}
+/**resource "random_pet" "sg" {}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -58,10 +58,10 @@ resource "aws_instance" "web" {
               echo "Hello World" > /var/www/html/index.html
               systemctl restart apache2
               EOF
-}
+} **/
 
 resource "aws_security_group" "web-sg" {
-  name = "${random_pet.sg.id}-sg"
+  name = "tfe-sg01"
   ingress {
     from_port   = 8080
     to_port     = 8080
