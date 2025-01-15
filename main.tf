@@ -15,16 +15,16 @@ terraform {
   required_version = ">= 1.1.0"
 
   cloud {
-    organization = "REPLACE_ME"
+    organization = "2025-01-11-sultansaturday"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "2025-01-14-tfe-api-workflow"
     }
   }
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
 resource "random_pet" "sg" {}
@@ -42,7 +42,7 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 
-  owners = ["099720109477"] # Canonical
+  owners = ["699475941935"] # Canonical
 }
 
 resource "aws_instance" "web" {
